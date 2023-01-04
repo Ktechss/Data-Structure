@@ -42,7 +42,8 @@ int stackele(int stack[],int top)      // function to see the stack
 }
 int main()
 {
-    int ch;
+    char ch;
+    int dummy;
     int stack[max_size];
     int item,option,top=-1;
     do{
@@ -68,10 +69,11 @@ int main()
             default: printf("Please select valid operation");
                     break;
         }
-        printf("\nDo you want to continue the operation Yes:1 / No :0:");
-        scanf("%d",&ch);
+        printf("\nDo you want to continue the operation Y / N:");
+        scanf("%d",&dummy);
+        scanf("%c",&ch);
     }
-    while(ch == 1);
+    while(ch == 'y'||'Y');
     return 0;
 
 }
